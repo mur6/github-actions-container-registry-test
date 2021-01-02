@@ -9,3 +9,5 @@ ARG USER_GID=$USER_UID
 RUN apt-get update \
     && apt-get -y install --no-install-recommends apt-utils dialog 2>&1 \
     && apt-get -y install git iproute2 procps lsb-release
+RUN pip --disable-pip-version-check --no-cache-dir install \
+    poetry flake8 black
