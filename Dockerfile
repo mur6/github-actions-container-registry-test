@@ -27,4 +27,4 @@ RUN apt-get update \
 COPY pyproject.toml poetry.lock /tmp/pip-tmp/
 WORKDIR /tmp/pip-tmp/
 RUN pip install --upgrade pip && pip --no-cache-dir install poetry
-RUN poetry install
+RUN poetry config virtualenvs.create false && poetry install
