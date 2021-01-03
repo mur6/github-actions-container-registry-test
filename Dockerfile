@@ -24,7 +24,7 @@ RUN apt-get update \
     && apt-get autoremove -y \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
-COPY pyptoject.toml poetry.lock /tmp/pip-tmp/
+COPY pyproject.toml poetry.lock /tmp/pip-tmp/
 WORKDIR /tmp/pip-tmp/
 RUN pip --no-cache-dir install poetry \
     && poetry install
