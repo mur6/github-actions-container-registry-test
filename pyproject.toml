@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "github-actions-container-registry-test"
+version = "0.1.0"
+description = ""
+authors = ["mur6"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+numba = { version = "^0.52.0", python = "=3.8" }
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
